@@ -1,0 +1,50 @@
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center_vertical">
+
+<TextView
+    android:id="@+id/capitales_primeraPregunta"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp"
+    android:text="¿Cuál es la capital de España?"
+    android:textSize="30sp" />
+
+
+<Button
+    android:id="@+id/capitalSevilla"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Sevilla" />
+
+<Button
+    android:id="@+id/capitalMadrid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Madrid" />
+
+<Button
+    android:id="@+id/capitalValencia"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Valencia" />
+
+<Button
+    android:id="@+id/capitalBarcelona"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Barcelona" />
+
+    <Button
+        android:id="@+id/siguienteEspaña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="ejecutar_capitales2"
+        android:text="Siguiente" />
+
+</LinearLayout>

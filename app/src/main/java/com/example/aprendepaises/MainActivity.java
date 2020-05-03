@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
-    private Button boton_jugar_banderas, boton_jugar_capitales;
+    
+    Button boton_jugar_banderas, boton_jugar_capitales;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     public void ejecutar_sobreLaApp (View vista_sobreLaApp){            //ejecuta el botón del
         Intent i=new Intent(this, sobreLaApp.class);      //menú "Sobre la App"
         startActivity(i);
-
     }
 
     public void ejecutar_sobreLosCreadores (View vista_sobreLosCreadores){   //ejecuta el botón del
@@ -66,5 +65,16 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(opciones_menu);
     }
+
+
+
+
+    //programación juego capitales
+
+    public void ejecutar_capitales1 (View ejecutar_capitales1){
+        Intent i=new Intent(this, primera_pregunta_capitales.class);
+        startActivity(i);
+    }
+
 
 }

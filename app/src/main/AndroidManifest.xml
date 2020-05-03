@@ -23,6 +23,12 @@
         </activity>
         <activity android:name=".sobreLaApp" />
         <activity android:name=".sobreLosCreadores" />
+        <activity android:name=".primera_pregunta_capitales"/>
+        <activity android:name=".segunda_pregunta_capitales"/>
+        <activity android:name=".tercera_pregunta_capitales"/>
+        <activity android:name=".cuarta_pregunta_capitales"/>
+        <activity android:name=".quinta_pregunta_capitales"/>
+        <activity android:name=".resultado_capitales"/>
     </application>
 
 </manifest>

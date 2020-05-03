@@ -1,0 +1,50 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/capitales_segundaPregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="¿Cuál es la capital de Alemania?"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/capitalBerlín"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Berlín" />
+
+    <Button
+        android:id="@+id/capitalMúnich"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Múnich" />
+
+    <Button
+        android:id="@+id/capitalBruselas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bruselas" />
+
+    <Button
+        android:id="@+id/capitalHamburgo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hamburgo" />
+
+    <Button
+        android:id="@+id/siguienteAlemania"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="ejecutar_capitales3"
+        android:text="Siguiente" />
+
+</LinearLayout>

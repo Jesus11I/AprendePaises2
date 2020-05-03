@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/capitales_cuartaPregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="¿Cuál es la capital de Francia?"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/capitalMónaco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mónaco" />
+
+    <Button
+        android:id="@+id/capitalParís"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="París" />
+
+    <Button
+        android:id="@+id/capitalLyon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lyon" />
+
+    <Button
+        android:id="@+id/capitalMarsella"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Marsella" />
+
+    <Button
+        android:id="@+id/siguienteFrancia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="ejecutar_capitales5"
+        android:text="Siguiente" />
+
+</LinearLayout>

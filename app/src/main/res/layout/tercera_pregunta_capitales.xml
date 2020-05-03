@@ -1,0 +1,50 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/capitales_terceraPregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="¿Cuál es la capital de Suiza?"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/capitalMónaco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mónaco" />
+
+    <Button
+        android:id="@+id/capitalBasilea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basilea" />
+
+    <Button
+        android:id="@+id/capitalEstocolmo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estocolmo" />
+
+    <Button
+        android:id="@+id/capitalBerna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Berna" />
+
+    <Button
+        android:id="@+id/siguienteSuiza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="ejecutar_capitales4"
+        android:text="Siguiente" />
+
+</LinearLayout>

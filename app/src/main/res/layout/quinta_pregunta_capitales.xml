@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/capitales_quintaPregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="¿Cuál es la capital de Rusia?"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/capitalKiev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kiev" />
+
+    <Button
+        android:id="@+id/capitalSanPetesburgo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="San Petesburgo" />
+
+    <Button
+        android:id="@+id/capitalMoscú"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Moscú" />
+
+    <Button
+        android:id="@+id/capitalMinsk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Minsk" />
+
+    <Button
+        android:id="@+id/siguienteRusia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="resultado_capitales"
+        android:text="Resultado" />
+
+</LinearLayout>
