@@ -10,8 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    
-    Button boton_jugar_banderas, boton_jugar_capitales;
+    private Button boton_jugar_banderas, boton_jugar_capitales;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,53 +27,44 @@ public class MainActivity extends AppCompatActivity {
 
         boton_jugar_capitales = (Button)findViewById(R.id.boton_jugar_capitales);
     }
-
+    //Mostraremos dos formas para habilitar los botones
+    //Habilitamos la relacion con el layout
     public void abrirBandera(){
         Intent intent = new Intent(this,Alemania.class);
         startActivity(intent);
     }
-
-
-
-    public void ejecutar_sobreLaApp (View vista_sobreLaApp){            //ejecuta el botón del
-        Intent i=new Intent(this, sobreLaApp.class);      //menú "Sobre la App"
+    //Habilitamos el boton con esta otra forma de relacion
+    public void ejecutar_capitales1 (View ejecutar_capitales1){
+        Intent i = new Intent(this, primera_pregunta_capitales.class);
         startActivity(i);
     }
-
-    public void ejecutar_sobreLosCreadores (View vista_sobreLosCreadores){   //ejecuta el botón del
-        Intent i=new Intent(this, sobreLosCreadores.class);    //menú "Sobre los Creadores"
+    //Habilitamos el boton con esta otra forma de relacion
+    public void ejecutar_sobreLaApp (View vista_sobreLaApp){
+        Intent i=new Intent(this, sobreLaApp.class);
         startActivity(i);
-
     }
-
-    /*@Override public boolean onCreateOptionsMenu(Menu menuApp){        //este método crea el menú
-        getMenuInflater().inflate(R.menu.menu_informacion, menuApp);   //de la activity principal
+    //Habilitamos el boton con esta otra forma de relacion
+    public void ejecutar_sobreLosCreadores (View vista_sobreLosCreadores){
+        Intent i=new Intent(this, sobreLosCreadores.class);
+        startActivity(i);
+    }
+    //Metodo para mostrar y ocultar el menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_informacion, menu);
         return true;
-    }*/
+    }
+    //Metodo para asignar las funciones correspondientes a las opciones
+    public boolean onOptionsItemSelected (MenuItem item){
+        int id = item.getItemId();
 
-    @Override public boolean onOptionsItemSelected (MenuItem opciones_menu){ //este método activa
-        int id=opciones_menu.getItemId();                                    //las opciones del menú
-                                                                     //(devuelve una acción de menú:
-        if (id==R.id.SobreLaApp){                             // sobre la app o sobre los creadores)
+        if (id==R.id.item1){
             ejecutar_sobreLaApp(null);
-            return true;
-        }
-        if (id==R.id.SobreLosCreadores){
+        }else if(id==R.id.item2){
             ejecutar_sobreLosCreadores(null);
             return true;
         }
-        return super.onOptionsItemSelected(opciones_menu);
+        return super.onOptionsItemSelected(item);
     }
-
-
-
-
-    //programación juego capitales
-
-    public void ejecutar_capitales1 (View ejecutar_capitales1){
-        Intent i=new Intent(this, primera_pregunta_capitales.class);
-        startActivity(i);
-    }
-
 
 }

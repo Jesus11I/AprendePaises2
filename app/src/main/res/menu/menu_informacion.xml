@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/SobreLaApp"
-        android:onClick="ejecutar_sobreLaApp"
-        android:title="Sobre la App" />
-
+        android:id="@+id/item1"
+        android:title="@string/item1" />
     <item
-        android:id="@+id/SobreLosCreadores"
-        android:onClick="ejecutar_sobreLosCreadores"
-        android:title="Sobre los Creadores" />
-
+        android:id="@+id/item2"
+        android:title="@string/item2" />
 </menu>
