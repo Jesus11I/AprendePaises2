@@ -43,7 +43,7 @@ public class Alemania extends Activity  implements View.OnClickListener {   //Vi
     }
 
     private void showToast(){ //Este metodo modificaremos la posiciondel Toast
-        Toast toast = Toast. makeText(this, "TE HAS EQUIVOCADO", Toast.LENGTH_LONG);
+        Toast toast = Toast. makeText(this, "TE HAS EQUIVOCADO", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,160,0);
         toast.show();
     }
