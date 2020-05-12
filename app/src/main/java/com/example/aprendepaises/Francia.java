@@ -48,7 +48,7 @@ public class Francia extends Activity implements View.OnClickListener{
     }
     //Con este metodo creamos el intent para cambiar de layout
     public void intent(){
-        Intent intent = new Intent(this,Espana.class);
+        Intent intent = new Intent(this,Suiza.class);
         startActivity(intent);
     }
 
