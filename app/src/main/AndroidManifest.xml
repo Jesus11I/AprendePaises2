@@ -10,9 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Espana"></activity>
+        <activity android:name=".Francia"></activity>
+        <activity android:name=".Espana" />
         <activity android:name=".Alemania" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
@@ -23,12 +25,12 @@
         </activity>
         <activity android:name=".sobreLaApp" />
         <activity android:name=".sobreLosCreadores" />
-        <activity android:name=".primera_pregunta_capitales"/>
-        <activity android:name=".segunda_pregunta_capitales"/>
-        <activity android:name=".tercera_pregunta_capitales"/>
-        <activity android:name=".cuarta_pregunta_capitales"/>
-        <activity android:name=".quinta_pregunta_capitales"/>
-        <activity android:name=".resultado_capitales"/>
+        <activity android:name=".primera_pregunta_capitales" />
+        <activity android:name=".segunda_pregunta_capitales" />
+        <activity android:name=".tercera_pregunta_capitales" />
+        <activity android:name=".cuarta_pregunta_capitales" />
+        <activity android:name=".quinta_pregunta_capitales" />
+        <activity android:name=".resultado_capitales" />
     </application>
 
 </manifest>
