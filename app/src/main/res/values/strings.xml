@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AprendePaises</string>
+    <string name="item1">Sobre la  App</string>
+    <string name="item2">Sobre los creadores</string>
 </resources>

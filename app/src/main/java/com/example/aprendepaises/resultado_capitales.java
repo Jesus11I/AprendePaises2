@@ -52,5 +52,9 @@ public class resultado_capitales extends Activity {
         Intent i=new Intent(this, MainActivity.class);
         startActivity(i);
     }
+    //Desactivamos el botton de volver con el metodo siguiente
+    public  void  onBackPressed(){
+
+    }
 
 }
