@@ -49,7 +49,7 @@ public class Suiza extends Activity  implements View.OnClickListener {
 
     //creamos el siguiente intent
     public void intent(){
-        Intent intent = new Intent(this,Espana.class);
+        Intent intent = new Intent(this,Rusia.class);
         startActivity(intent);
     }
 
@@ -66,6 +66,7 @@ public class Suiza extends Activity  implements View.OnClickListener {
 
             @Override
             public void onFinish() {
+
                 intent();
             }
         }.start();
