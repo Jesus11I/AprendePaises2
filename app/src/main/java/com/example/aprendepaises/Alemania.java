@@ -74,8 +74,6 @@ public class Alemania extends Activity  implements View.OnClickListener {   //Vi
         Intent intent = new Intent(this,Espana.class);
         startActivity(intent);
     }
-
-
  //cuenta regresiva y cambio automatico de intent
     public void cuenta()
     {
