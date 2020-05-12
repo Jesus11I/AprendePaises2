@@ -86,6 +86,7 @@ public class Alemania extends Activity  implements View.OnClickListener {   //Vi
 
             @Override
             public void onFinish() {
+
                 intent();
             }
         }.start();

@@ -48,7 +48,7 @@ public class Rusia extends Activity  implements View.OnClickListener {
     }
     //creamos el siguiente intent
     public void intent(){
-        Intent intent = new Intent(this,Espana.class);
+        Intent intent = new Intent(this,resultado_capitales.class);
         startActivity(intent);
     }
 
@@ -64,6 +64,7 @@ public class Rusia extends Activity  implements View.OnClickListener {
 
             @Override
             public void onFinish() {
+
                 intent();
             }
         }.start();
@@ -73,6 +74,22 @@ public class Rusia extends Activity  implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.italia:
+                cuenta();
+                showToast();
+                solucion();
+                break;
+            case R.id.rusia:
+                intent();
+                solucion();
+                break;
+            case R.id.rumania:
+                cuenta();
+                showToast();
+                solucion();
+                break;
 
+        }
     }
 }
