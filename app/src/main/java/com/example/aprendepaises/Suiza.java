@@ -1,5 +1,7 @@
 package com.example.aprendepaises;
 
+
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,74 +14,49 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-public class Alemania extends Activity  implements View.OnClickListener {   //View.Onlistener implementa la funcion de clikear
-    private ImageView iv_alemania;
-    private Button belgica, alemania, suiza;
+public class Suiza extends Activity  implements View.OnClickListener {
+    private ImageView iv_suiza;
+    private Button malta, alemania, suiza;
     private TextView reloj;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.alemania);
+        setContentView(R.layout.suiza);
 
-        iv_alemania = (ImageView)findViewById(R.id.imageView2_Alemania);
-        belgica = (Button)findViewById(R.id.belgica);
+        iv_suiza = (ImageView)findViewById(R.id.imageView2_Suiza);
+        malta = (Button)findViewById(R.id.malta);
         alemania = (Button)findViewById(R.id.alemania);
         suiza = (Button)findViewById(R.id.suiza);
         reloj = (TextView)findViewById(R.id.reloj);
 
-        belgica.setOnClickListener(this);
+        malta.setOnClickListener(this);
         alemania.setOnClickListener(this);
         suiza.setOnClickListener(this);
-
     }
+    //Da color verde a la solucion tras clickear
+    public void solucion() {
+        suiza.setBackgroundColor(Color.GREEN);
 
-    public void solucion() {  // da color tras haber respondido  la respùesta corecta
-        alemania.setBackgroundColor(Color.GREEN);
-
-        alemania.setEnabled(true);
+        suiza.setEnabled(true);
     }
-
-    private void showToast(){ //Este metodo modificaremos la posiciondel Toast
+    //Este metodo modificaremos la posiciondel Toast
+    private void showToast(){
         Toast toast = Toast. makeText(this, "TE HAS EQUIVOCADO", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,160,0);
         toast.show();
     }
-    @Override
-    public void onClick(View v) {
 
-        switch (v.getId()){
-            case R.id.belgica:
-                cuenta();
-                showToast();
-                solucion();
-                break;
-            case R.id.alemania:
-                intent();
-                solucion();
-                break;
-            case R.id.suiza:
-                cuenta();
-                showToast();
-                solucion();
-                break;
-
-        }
-
-    }
     //creamos el siguiente intent
     public void intent(){
-        Intent intent = new Intent(this,Espana.class);
+        Intent intent = new Intent(this,Rusia.class);
         startActivity(intent);
-        finish();
     }
     //Este metodo deshabilita el boton volver atras
     public void onBackPressed(){
 
     }
- //cuenta regresiva y cambio automatico de intent
+    //cuenta regresiva y cambio automatico de intent tras acabar el tiempo
     public void cuenta()
     {
         new CountDownTimer(4000,1000) {
@@ -98,4 +75,26 @@ public class Alemania extends Activity  implements View.OnClickListener {   //Vi
 
     }
 
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+            case R.id.suiza:
+                intent();
+                solucion();
+                break;
+            case R.id.alemania:
+                cuenta();
+                showToast();
+                solucion();
+                break;
+            case R.id.malta:
+                cuenta();
+                showToast();
+                solucion();
+                break;
+
+        }
+
+    }
 }

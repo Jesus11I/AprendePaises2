@@ -1,5 +1,6 @@
 package com.example.aprendepaises;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,31 +14,31 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Espana extends Activity  implements View.OnClickListener{
-
-    private ImageView iv_espana;
-    private Button espana, eslovaquia, moldavia;
+public class Rusia extends Activity  implements View.OnClickListener {
+    private ImageView iv_rusia;
+    private Button italia, rusia, rumania;
     private TextView reloj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.espana);
+        setContentView(R.layout.rusia);
 
-        iv_espana = (ImageView)findViewById(R.id.imageView2_espana);
-        espana = (Button)findViewById(R.id.espana);
-        eslovaquia = (Button)findViewById(R.id.eslovaquia);
-        moldavia = (Button)findViewById(R.id.moldavia);
+        iv_rusia = (ImageView)findViewById(R.id.imageView2_Alemania);
+        italia = (Button)findViewById(R.id.italia);
+        rusia = (Button)findViewById(R.id.rusia);
+        rumania = (Button)findViewById(R.id.rumania);
         reloj = (TextView)findViewById(R.id.reloj);
 
-        espana.setOnClickListener(this);
-        eslovaquia.setOnClickListener(this);
-        moldavia.setOnClickListener(this);
+        italia.setOnClickListener(this);
+        rusia.setOnClickListener(this);
+        rumania.setOnClickListener(this);
+
     }
-    //Da color tras haber respondido  la respùesta corecta
+    //Da color verde a la solucion tras clickear
     public void solucion() {
-        espana.setBackgroundColor(Color.GREEN);
-        espana.setEnabled(true);
+        rusia.setBackgroundColor(Color.GREEN);
+        rusia.setEnabled(true);
     }
     //Este metodo modificaremos la posiciondel Toast
     private void showToast(){
@@ -45,18 +46,16 @@ public class Espana extends Activity  implements View.OnClickListener{
         toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,160,0);
         toast.show();
     }
-
-    //creamos el medotdo paracambiar de intent
+    //creamos el siguiente intent
     public void intent(){
-        Intent intent = new Intent(this,Francia.class);
+        Intent intent = new Intent(this,resultado_capitales.class);
         startActivity(intent);
     }
     //Este metodo deshabilita el boton volver atras
     public void onBackPressed(){
 
     }
-    //Creamos un metodo de cuenta regresiva y a su vez
-    //cambio automatico de intent
+    //cuenta regresiva y cambio automatico de intent
     public void cuenta()
     {
         new CountDownTimer(4000,1000) {
@@ -68,31 +67,32 @@ public class Espana extends Activity  implements View.OnClickListener{
 
             @Override
             public void onFinish() {
+
                 intent();
             }
         }.start();
 
     }
 
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.espana:
-                intent();
-                solucion();
-                break;
-            case R.id.eslovaquia:
+            case R.id.italia:
                 cuenta();
                 showToast();
                 solucion();
                 break;
-            case R.id.moldavia:
+            case R.id.rusia:
+                intent();
+                solucion();
+                break;
+            case R.id.rumania:
                 cuenta();
                 showToast();
                 solucion();
                 break;
 
         }
-
     }
 }
