@@ -36,9 +36,9 @@ public class Suiza extends Activity  implements View.OnClickListener {
     }
     //Da color verde a la solucion tras clickear
     public void solucion() {
-        alemania.setBackgroundColor(Color.GREEN);
+        suiza.setBackgroundColor(Color.GREEN);
 
-        alemania.setEnabled(true);
+        suiza.setEnabled(true);
     }
     //Este metodo modificaremos la posiciondel Toast
     private void showToast(){
@@ -52,8 +52,10 @@ public class Suiza extends Activity  implements View.OnClickListener {
         Intent intent = new Intent(this,Rusia.class);
         startActivity(intent);
     }
+    //Este metodo deshabilita el boton volver atras
+    public void onBackPressed(){
 
-
+    }
     //cuenta regresiva y cambio automatico de intent tras acabar el tiempo
     public void cuenta()
     {

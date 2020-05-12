@@ -50,9 +50,12 @@ public class Francia extends Activity implements View.OnClickListener{
     public void intent(){
         Intent intent = new Intent(this,Suiza.class);
         startActivity(intent);
+        finish();
     }
+    //Este metodo deshabilita el boton volver atras
+    public void onBackPressed(){
 
-
+    }
     //Creamos el metodo cuenta con una cuenta regresiva y
     // cambio automatico de intent
     public void cuenta()

@@ -51,7 +51,10 @@ public class Rusia extends Activity  implements View.OnClickListener {
         Intent intent = new Intent(this,resultado_capitales.class);
         startActivity(intent);
     }
+    //Este metodo deshabilita el boton volver atras
+    public void onBackPressed(){
 
+    }
     //cuenta regresiva y cambio automatico de intent
     public void cuenta()
     {

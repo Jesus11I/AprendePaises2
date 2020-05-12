@@ -73,6 +73,11 @@ public class Alemania extends Activity  implements View.OnClickListener {   //Vi
     public void intent(){
         Intent intent = new Intent(this,Espana.class);
         startActivity(intent);
+        finish();
+    }
+    //Este metodo deshabilita el boton volver atras
+    public void onBackPressed(){
+
     }
  //cuenta regresiva y cambio automatico de intent
     public void cuenta()
