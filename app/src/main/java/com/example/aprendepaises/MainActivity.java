@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     public void ejecutar_capitales1 (View ejecutar_capitales1){
         Intent i = new Intent(this, primera_pregunta_capitales.class);
         startActivity(i);
+
+
     }
     //Habilitamos el boton con esta otra forma de relacion
     public void ejecutar_sobreLaApp (View vista_sobreLaApp){
@@ -48,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i=new Intent(this, sobreLosCreadores.class);
         startActivity(i);
     }
+
+
+
     //Metodo para mostrar y ocultar el menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

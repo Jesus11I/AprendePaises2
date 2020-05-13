@@ -11,10 +11,7 @@ import android.widget.Toast;
 public class segunda_pregunta_capitales extends Activity implements View.OnClickListener{
 
     Button a,b,c,d,siguiente;
-    int calificaciones=0;
-    Intent i, r;
-    Bundle bb;
-
+    Intent i;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +25,6 @@ public class segunda_pregunta_capitales extends Activity implements View.OnClick
         d=(Button)findViewById(R.id.capitalHamburgo);
         siguiente=(Button)findViewById(R.id.siguienteAlemania);
 
-        /*try{
-            r=getIntent();
-            bb=r.getExtras();
-            calificaciones=bb.getInt("calificaciones");
-        } catch (Exception e){
-            Toast.makeText(this, "Error al recibir datos", Toast.LENGTH_SHORT).show();
-        }*/
-
         a.setOnClickListener(this);
         b.setOnClickListener(this);
         c.setOnClickListener(this);
@@ -46,9 +35,6 @@ public class segunda_pregunta_capitales extends Activity implements View.OnClick
 
     public void deshabilitar(){
         a.setBackgroundColor(Color.GREEN);
-        b.setBackgroundColor(Color.RED);
-        c.setBackgroundColor(Color.RED);
-        d.setBackgroundColor(Color.RED);
 
         a.setEnabled(false);
         b.setEnabled(false);
@@ -61,19 +47,15 @@ public class segunda_pregunta_capitales extends Activity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.capitalBerlín: //respuesta correcta
-                calificaciones+=1;
                 deshabilitar();
                 break;
             case R.id.capitalMúnich:
-                calificaciones+=0;
                 deshabilitar();
                 break;
             case R.id.capitalBruselas:
-                calificaciones+=0;
                 deshabilitar();
                 break;
             case R.id.capitalHamburgo:
-                calificaciones+=0;
                 deshabilitar();
                 break;
             case R.id.siguienteAlemania:
@@ -84,17 +66,9 @@ public class segunda_pregunta_capitales extends Activity implements View.OnClick
             default:
                 break;
         }
-        i.putExtra("calificacion", calificaciones);
     }
 
 
 
-
-
-
-    public void ejecutar_capitales3 (View ejecutar_capitales3) {
-        Intent i = new Intent(this, tercera_pregunta_capitales.class);
-        startActivity(i);
-    }
 }
 

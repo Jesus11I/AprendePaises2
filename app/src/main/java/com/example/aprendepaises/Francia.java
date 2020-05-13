@@ -35,7 +35,7 @@ public class Francia extends Activity implements View.OnClickListener{
         croacia.setOnClickListener(this);
         francia.setOnClickListener(this);
     }
-    //Dara color tras haber respondido  la respùesta corecta
+    //Dara color tras haber respondido la respùesta corecta
     public void solucion() {
         francia.setBackgroundColor(Color.GREEN);
         francia.setEnabled(true);

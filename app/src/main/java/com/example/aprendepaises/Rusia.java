@@ -48,7 +48,7 @@ public class Rusia extends Activity  implements View.OnClickListener {
     }
     //creamos el siguiente intent
     public void intent(){
-        Intent intent = new Intent(this,resultado_capitales.class);
+        Intent intent = new Intent(this, resultado_capitales.class);
         startActivity(intent);
     }
     //Este metodo deshabilita el boton volver atras

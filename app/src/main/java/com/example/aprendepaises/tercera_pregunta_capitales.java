@@ -11,9 +11,7 @@ import android.widget.Toast;
 public class tercera_pregunta_capitales extends Activity implements View.OnClickListener {
 
     Button a,b,c,d,siguiente;
-    int calificaciones=0;
-    Intent i, r;
-    Bundle bb;
+    Intent i;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +26,6 @@ public class tercera_pregunta_capitales extends Activity implements View.OnClick
         d=(Button)findViewById(R.id.capitalBerna);
         siguiente=(Button)findViewById(R.id.siguienteSuiza);
 
-        /*try{
-            r=getIntent();
-            bb=r.getExtras();
-            calificaciones=bb.getInt("calificaciones");
-        } catch (Exception e){
-            Toast.makeText(this, "Error al recibir datos", Toast.LENGTH_SHORT).show();
-        }*/
-
         a.setOnClickListener(this);
         b.setOnClickListener(this);
         c.setOnClickListener(this);
@@ -45,9 +35,6 @@ public class tercera_pregunta_capitales extends Activity implements View.OnClick
     }
 
     public void deshabilitar(){                     //da color y deshabilita las opciones
-        a.setBackgroundColor(Color.RED);
-        b.setBackgroundColor(Color.RED);
-        c.setBackgroundColor(Color.RED);
         d.setBackgroundColor(Color.GREEN);
 
         a.setEnabled(false);
@@ -60,43 +47,28 @@ public class tercera_pregunta_capitales extends Activity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.capitalMónaco:
-                calificaciones+=0;
                 deshabilitar();
                 break;
-            case R.id.capitalBasilea: //respuesta correcta
-                calificaciones+=0;
+            case R.id.capitalBasilea:
                 deshabilitar();
                 break;
             case R.id.capitalEstocolmo:
-                calificaciones+=0;
                 deshabilitar();
                 break;
-            case R.id.capitalBerna:
-                calificaciones+=1;
+            case R.id.capitalBerna:   //respuesta correcta
                 deshabilitar();
                 break;
             case R.id.siguienteSuiza:
                 deshabilitar();
-                Intent i=new Intent(this, cuarta_pregunta_capitales.class);
+                Intent i = new Intent(this, cuarta_pregunta_capitales.class);
                 startActivity(i);
                 break;
             default:
                 break;
         }
 
-        i.putExtra("calificaciones", calificaciones);
     }
 
-
-
-
-
-
-
-    public void ejecutar_capitales4 (View ejecutar_capitales4){
-        Intent i=new Intent(this, cuarta_pregunta_capitales.class);
-        startActivity(i);
-    }
 }

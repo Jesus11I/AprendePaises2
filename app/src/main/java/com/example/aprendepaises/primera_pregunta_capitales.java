@@ -10,63 +10,44 @@ import android.widget.Switch;
 
 public class primera_pregunta_capitales extends Activity implements View.OnClickListener {
 
-    Button a,b,c,d,siguiente;
-    int calificaciones=0;
-    Intent i;
+    Button a,b,c,d,siguiente;                     //declaración de botones
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.primera_pregunta_capitales);
 
-        i=new Intent(this, segunda_pregunta_capitales.class);
 
-
-        a=(Button)findViewById(R.id.capitalSevilla);
+        a=(Button)findViewById(R.id.capitalSevilla);           //inicialización de botones
         b=(Button)findViewById(R.id.capitalMadrid);
         c=(Button)findViewById(R.id.capitalValencia);
         d=(Button)findViewById(R.id.capitalBarcelona);
         siguiente=(Button)findViewById(R.id.siguienteEspaña);
 
-        a.setOnClickListener(this);
+        a.setOnClickListener(this);                //evento para que funcionen los botones
         b.setOnClickListener(this);
         c.setOnClickListener(this);
         d.setOnClickListener(this);
         siguiente.setOnClickListener(this);
+
         siguiente.setEnabled(false);              //deshabilita siguiente hasta que se escoja una respuesta
     }
 
-    public void deshabilitar(){                     //da color y deshabilita las opciones
-        a.setBackgroundColor(Color.RED);
-        b.setBackgroundColor(Color.GREEN);
-        c.setBackgroundColor(Color.RED);
-        d.setBackgroundColor(Color.RED);
-
-        a.setEnabled(false);
-        b.setEnabled(false);
-        c.setEnabled(false);
-        d.setEnabled(false);
-        siguiente.setEnabled(true); //se puede poner o no
-    }
 
 
-    @Override
+    @Override                             //Este método se crea al implementar el evento OnClickListener. Gestiona los eventos
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.capitalSevilla:
-                calificaciones=0;
-                deshabilitar();
+                deshabilitar();                 //una vez que se contesta se deshabilitan los botones. (Igual para las posteriores)
                 break;
-            case R.id.capitalMadrid: //respuesta correcta
-                calificaciones=1;
+            case R.id.capitalMadrid:           //respuesta correcta
                 deshabilitar();
                 break;
             case R.id.capitalValencia:
-                calificaciones=0;
                 deshabilitar();
                 break;
             case R.id.capitalBarcelona:
-                calificaciones=0;
                 deshabilitar();
                 break;
             case R.id.siguienteEspaña:
@@ -78,14 +59,18 @@ public class primera_pregunta_capitales extends Activity implements View.OnClick
                 break;
         }
 
-        i.putExtra("calificaciones", calificaciones);
+    }
+
+    public void deshabilitar(){                     //da color y deshabilita las opciones
+
+        b.setBackgroundColor(Color.GREEN);          //respuesta correcta
+
+        a.setEnabled(false);
+        b.setEnabled(false);
+        c.setEnabled(false);
+        d.setEnabled(false);
+        siguiente.setEnabled(true);               //habilita siguiente al pulsar una respuesta
     }
 
 
-
-
-    public void ejecutar_capitales2 (View ejecutar_capitales2){
-        Intent i=new Intent(this, segunda_pregunta_capitales.class);
-        startActivity(i);
-    }
 }
