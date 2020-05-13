@@ -34,6 +34,7 @@ public class Rusia extends Activity  implements View.OnClickListener {
         rusia.setOnClickListener(this);
         rumania.setOnClickListener(this);
 
+        reloj.setEnabled(false);
     }
     //Da color verde a la solucion tras clickear
     public void solucion() {
@@ -50,6 +51,7 @@ public class Rusia extends Activity  implements View.OnClickListener {
     public void intent(){
         Intent intent = new Intent(this, resultado_capitales.class);
         startActivity(intent);
+        finish();
     }
     //Este metodo deshabilita el boton volver atras
     public void onBackPressed(){
@@ -62,7 +64,10 @@ public class Rusia extends Activity  implements View.OnClickListener {
             @Override
             public void onTick(long millisUntilFinished) {
                 reloj.setText("Siguiente en "+millisUntilFinished/1000);
-                reloj.setEnabled(false);
+                reloj.setEnabled(true);
+                italia.setEnabled(false);
+                rumania.setEnabled(false);
+                rusia.setEnabled(false);
             }
 
             @Override
@@ -73,8 +78,7 @@ public class Rusia extends Activity  implements View.OnClickListener {
         }.start();
 
     }
-
-
+    //Metodo de View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()){

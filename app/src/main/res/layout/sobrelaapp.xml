@@ -11,8 +11,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¡Juega y aprende con AprendePaíses! "
-        android:fontFamily="sans-serif-black"
-        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.407"
@@ -22,30 +20,25 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:fontFamily="sans-serif-black"
+        android:layout_width="367dp"
+        android:layout_height="66dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:text="La App con la que aprenderás las banderas y las capitales de los países. "
-        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22000003" />
+        app:layout_constraintVertical_bias="0.377" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recomendado para niños de entre 5 y 10 años."
-        android:fontFamily="sans-serif-black"
-        android:textSize="17dp"
+        android:text="Recomendado para todas las edades"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.351" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

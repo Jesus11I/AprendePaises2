@@ -12,7 +12,9 @@ import android.widget.Toast;
 
 public class resultado_capitales extends Activity {
 
-    Intent i;
+    Intent i, r;
+    Bundle bb;
+    int calificaciones=0;
     Button reg;
     TextView texto;
 
@@ -22,9 +24,19 @@ public class resultado_capitales extends Activity {
         setContentView(R.layout.resultado_capitales);
 
         reg=(Button)findViewById(R.id.Inicio);
-       texto=(TextView)findViewById(R.id.FIN);
+       texto=(TextView)findViewById(R.id.Resultado);
         i=new Intent(this, MainActivity.class);
 
+       /* try{
+            r=getIntent();
+            bb=r.getExtras();
+            calificaciones=bb.getInt("Resultado:");
+            texto.setText("calificaciones:"+ calificaciones);
+        } catch (Exception e){
+            Toast.makeText(this, "Error al recibir datos", Toast.LENGTH_SHORT).show();
+        }*/
+
+        i.putExtra("calificaciones", calificaciones);
 
         reg.setOnClickListener(new OnClickListener() {
             @Override
@@ -36,6 +48,11 @@ public class resultado_capitales extends Activity {
     }
 
 
+    public void inicio (View inicio){
+        Intent i=new Intent(this, MainActivity.class);
+        startActivity(i);
+
+    }
     //Desactivamos el botton de volver con el metodo siguiente
     public  void  onBackPressed(){
 

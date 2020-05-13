@@ -34,6 +34,8 @@ public class Francia extends Activity implements View.OnClickListener{
         holanda.setOnClickListener(this);
         croacia.setOnClickListener(this);
         francia.setOnClickListener(this);
+
+        reloj.setEnabled(false);
     }
     //Dara color tras haber respondido la respùesta corecta
     public void solucion() {
@@ -65,6 +67,9 @@ public class Francia extends Activity implements View.OnClickListener{
             public void onTick(long millisUntilFinished) {
                 reloj.setText("Siguiente en "+millisUntilFinished/1000);
                 reloj.setEnabled(false);
+                holanda.setEnabled(false);
+                croacia.setEnabled(false);
+                francia.setEnabled(false);
             }
 
             @Override
