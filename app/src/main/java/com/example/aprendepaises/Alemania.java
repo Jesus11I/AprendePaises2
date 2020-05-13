@@ -34,19 +34,52 @@ public class Alemania extends Activity  implements View.OnClickListener {   //Vi
         alemania.setOnClickListener(this);
         suiza.setOnClickListener(this);
 
+        reloj.setEnabled(false);
+
     }
-
-    public void solucion() {  // da color tras haber respondido  la respùesta corecta
+    // da color tras haber respondido  la respùesta corecta
+    public void solucion() {
         alemania.setBackgroundColor(Color.GREEN);
-
         alemania.setEnabled(true);
     }
-
-    private void showToast(){ //Este metodo modificaremos la posiciondel Toast
+    //Este metodo modificaremos la posiciondel Toast
+    private void showToast(){
         Toast toast = Toast. makeText(this, "TE HAS EQUIVOCADO", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,160,0);
         toast.show();
     }
+    //creamos el metodo paracambiar de intent
+    public void intent(){
+        Intent intent = new Intent(this,Espana.class);
+        startActivity(intent);
+        finish();
+    }
+    //Este metodo deshabilita el boton volver atras
+    public void onBackPressed(){
+    }
+    //Creamos un metodo de cuenta regresiva y a su vez
+    //cambio automatico de intent
+    public void cuenta()
+    {
+        new CountDownTimer(4000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                reloj.setText("Siguiente en "+millisUntilFinished/1000);
+                reloj.setEnabled(true);
+                belgica.setEnabled(false);
+                alemania.setEnabled(false);
+                suiza.setEnabled(false);
+            }
+
+            @Override
+            public void onFinish() {
+
+                intent();
+            }
+        }.start();
+
+    }
+    //Metodo de View.OnClickListener
     @Override
     public void onClick(View v) {
 
@@ -67,34 +100,6 @@ public class Alemania extends Activity  implements View.OnClickListener {   //Vi
                 break;
 
         }
-
-    }
-    //creamos el siguiente intent
-    public void intent(){
-        Intent intent = new Intent(this,Espana.class);
-        startActivity(intent);
-        finish();
-    }
-    //Este metodo deshabilita el boton volver atras
-    public void onBackPressed(){
-
-    }
- //cuenta regresiva y cambio automatico de intent
-    public void cuenta()
-    {
-        new CountDownTimer(4000,1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                reloj.setText("Siguiente en "+millisUntilFinished/1000);
-                reloj.setEnabled(false);
-            }
-
-            @Override
-            public void onFinish() {
-
-                intent();
-            }
-        }.start();
 
     }
 

@@ -66,5 +66,9 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    //Este metodo deshabilita el boton volver atras
+    public void onBackPressed(){
+        finish();
+    }
 
 }

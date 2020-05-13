@@ -33,6 +33,8 @@ public class Espana extends Activity  implements View.OnClickListener{
         espana.setOnClickListener(this);
         eslovaquia.setOnClickListener(this);
         moldavia.setOnClickListener(this);
+
+        reloj.setEnabled(false);
     }
     //Da color tras haber respondido  la respùesta corecta
     public void solucion() {
@@ -45,11 +47,11 @@ public class Espana extends Activity  implements View.OnClickListener{
         toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,160,0);
         toast.show();
     }
-
-    //creamos el medotdo paracambiar de intent
+    //creamos el metodo paracambiar de intent
     public void intent(){
         Intent intent = new Intent(this,Francia.class);
         startActivity(intent);
+        finish();
     }
     //Este metodo deshabilita el boton volver atras
     public void onBackPressed(){
@@ -64,10 +66,14 @@ public class Espana extends Activity  implements View.OnClickListener{
             public void onTick(long millisUntilFinished) {
                 reloj.setText("Siguiente en "+millisUntilFinished/1000);
                 reloj.setEnabled(false);
+                espana.setEnabled(false);
+                eslovaquia.setEnabled(false);
+                moldavia.setEnabled(false);
             }
 
             @Override
             public void onFinish() {
+
                 intent();
             }
         }.start();
