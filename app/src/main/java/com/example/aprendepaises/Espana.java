@@ -18,6 +18,7 @@ public class Espana extends Activity  implements View.OnClickListener{
     private ImageView iv_espana;
     private Button espana, eslovaquia, moldavia;
     private TextView reloj;
+    int score=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +100,11 @@ public class Espana extends Activity  implements View.OnClickListener{
                 break;
 
         }
+//        if(espana.equals(espana)) {
+//           score++;
+//        }else {
+//            score=0;
+//        }
 
     }
 }

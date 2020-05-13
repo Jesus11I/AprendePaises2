@@ -17,7 +17,7 @@ public class Alemania extends Activity  implements View.OnClickListener {   //Vi
     private ImageView iv_alemania;
     private Button belgica, alemania, suiza;
     private TextView reloj;
-
+    int score=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +100,11 @@ public class Alemania extends Activity  implements View.OnClickListener {   //Vi
                 break;
 
         }
+//        if(alemania.equals(alemania)) {
+//            score=1;
+//        }else {
+//            score=0;
+//        }
 
     }
 
