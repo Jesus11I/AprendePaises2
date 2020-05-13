@@ -100,11 +100,6 @@ public class Espana extends Activity  implements View.OnClickListener{
                 break;
 
         }
-//        if(espana.equals(espana)) {
-//           score++;
-//        }else {
-//            score=0;
-//        }
 
     }
 }

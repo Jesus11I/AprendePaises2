@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Francia">
+    tools:context=".Francia"
+    android:background="#E3F2FD">
 
     <EditText
         android:id="@+id/reloj"
@@ -58,6 +59,7 @@
             android:layout_height="wrap_content"
             android:padding="30dp"
             android:text="francia"
+            android:textColor="#000000"
             android:textSize="25sp" />
     </LinearLayout>
 

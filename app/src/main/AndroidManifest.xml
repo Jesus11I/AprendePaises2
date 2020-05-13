@@ -9,30 +9,68 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Rusia"></activity>
-        <activity android:name=".Suiza" />
-        <activity android:name=".Francia" />
-        <activity android:name=".Espana" />
-        <activity android:name=".Alemania" />
+        android:theme="@style/AppTheme"
+        >
+        <activity
+            android:name=".Rusia"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".Suiza"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".Francia"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".Espana"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".Alemania"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".sobreLaApp" />
-        <activity android:name=".sobreLosCreadores" />
-        <activity android:name=".primera_pregunta_capitales" />
-        <activity android:name=".segunda_pregunta_capitales" />
-        <activity android:name=".tercera_pregunta_capitales" />
-        <activity android:name=".cuarta_pregunta_capitales" />
-        <activity android:name=".quinta_pregunta_capitales" />
-        <activity android:name=".resultado_capitales" />
+        <activity
+            android:name=".sobreLaApp"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".sobreLosCreadores"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".primera_pregunta_capitales"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".segunda_pregunta_capitales"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".tercera_pregunta_capitales"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".cuarta_pregunta_capitales"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".quinta_pregunta_capitales"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".resultado_capitales"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
     </application>
 
 </manifest>

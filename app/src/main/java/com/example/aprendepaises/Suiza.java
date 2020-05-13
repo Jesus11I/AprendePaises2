@@ -52,6 +52,7 @@ public class Suiza extends Activity  implements View.OnClickListener {
     public void intent(){
         Intent intent = new Intent(this,Rusia.class);
         startActivity(intent);
+        finish();
     }
     //Este metodo deshabilita el boton volver atras
     public void onBackPressed(){
@@ -64,7 +65,7 @@ public class Suiza extends Activity  implements View.OnClickListener {
             @Override
             public void onTick(long millisUntilFinished) {
                 reloj.setText("Siguiente en "+millisUntilFinished/1000);
-                reloj.setEnabled(true);
+                reloj.setEnabled(false);
                 suiza.setEnabled(false);
                 alemania.setEnabled(false);
                 malta.setEnabled(false);

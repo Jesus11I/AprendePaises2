@@ -64,7 +64,7 @@ public class Rusia extends Activity  implements View.OnClickListener {
             @Override
             public void onTick(long millisUntilFinished) {
                 reloj.setText("Siguiente en "+millisUntilFinished/1000);
-                reloj.setEnabled(true);
+                reloj.setEnabled(false);
                 italia.setEnabled(false);
                 rumania.setEnabled(false);
                 rusia.setEnabled(false);

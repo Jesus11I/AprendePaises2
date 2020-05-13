@@ -20,38 +20,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         boton_jugar_banderas = (Button)findViewById(R.id.boton_jugar_banderas);
-        boton_jugar_banderas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                abrirBandera();
-
-            }
-        });
-
         boton_jugar_capitales = (Button)findViewById(R.id.boton_jugar_capitales);
     }
     //Mostraremos dos formas para habilitar los botones
     //Habilitamos la relacion con el layout
-    public void abrirBandera(){
+    public void abrirBandera(View abrirBandera){
         Intent intent = new Intent(this,Alemania.class);
         startActivity(intent);
+        finish();
     }
     //Habilitamos el boton con esta otra forma de relacion
     public void ejecutar_capitales1 (View ejecutar_capitales1){
         Intent i = new Intent(this, primera_pregunta_capitales.class);
         startActivity(i);
-
-
-    }
+        finish();
+     }
     //Habilitamos el boton con esta otra forma de relacion
     public void ejecutar_sobreLaApp (View vista_sobreLaApp){
         Intent i=new Intent(this, sobreLaApp.class);
         startActivity(i);
+        finish();
     }
     //Habilitamos el boton con esta otra forma de relacion
     public void ejecutar_sobreLosCreadores (View vista_sobreLosCreadores){
         Intent i=new Intent(this, sobreLosCreadores.class);
         startActivity(i);
+        finish();
     }
 
 
@@ -82,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         if (Salir + 2000 > System.currentTimeMillis()){
             mensaje.cancel();
             super.onBackPressed();
+            finish();
             return;
         }else{
             mensaje = Toast.makeText(getBaseContext(),"Presiona otra vez para salir",Toast.LENGTH_SHORT);
