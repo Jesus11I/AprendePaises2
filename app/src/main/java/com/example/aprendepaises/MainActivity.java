@@ -8,9 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button boton_jugar_banderas, boton_jugar_capitales;
+    private long Salir;
+    private Toast mensaje;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,9 +69,21 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    //Este metodo deshabilita el boton volver atras
+    /*Este metodo hara que el al presionar dos veces el boton de volver nos cierre la app y
+   al presionar una vez nos devolvera en pantalla un mensaje.*/
+    @Override
     public void onBackPressed(){
-        finish();
+
+        if (Salir + 2000 > System.currentTimeMillis()){
+            mensaje.cancel();
+            super.onBackPressed();
+            return;
+        }else{
+            mensaje = Toast.makeText(getBaseContext(),"Presiona otra vez para salir",Toast.LENGTH_SHORT);
+            mensaje.show();
+        }
+        Salir = System.currentTimeMillis();
+
     }
 
 }
