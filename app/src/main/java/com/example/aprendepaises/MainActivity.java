@@ -39,13 +39,11 @@ public class MainActivity extends AppCompatActivity {
     public void ejecutar_sobreLaApp (View vista_sobreLaApp){
         Intent i=new Intent(this, sobreLaApp.class);
         startActivity(i);
-        finish();
     }
     //Habilitamos el boton con esta otra forma de relacion
     public void ejecutar_sobreLosCreadores (View vista_sobreLosCreadores){
         Intent i=new Intent(this, sobreLosCreadores.class);
         startActivity(i);
-        finish();
     }
 
 
