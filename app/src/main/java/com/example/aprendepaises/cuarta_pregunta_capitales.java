@@ -64,13 +64,15 @@ public class cuarta_pregunta_capitales extends Activity implements View.OnClickL
                 deshabilitar();
                 Intent i=new Intent(this, quinta_pregunta_capitales.class);
                 startActivity(i);
+                finish();
                 break;
             default:
                 break;
         }
 
     }
+    //Este metodo deshabilita el boton volver atras
+    public void onBackPressed(){
 
-
-
+    }
 }

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#87BAE4">
 
     <ImageView
         android:id="@+id/imageView_banderas"
@@ -18,7 +19,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:layout_below="@id/imageView_banderas"
         android:orientation="vertical">
 
@@ -26,13 +27,14 @@
             android:id="@+id/boton_jugar_banderas"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:onClick="abrirBandera"
             android:text="¡Adivina la Bandera!"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/boton_jugar_capitales"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="98dp"
             android:baselineAligned="false"
             android:onClick="ejecutar_capitales1"
             android:text="¡Adivina la Capital!"

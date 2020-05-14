@@ -54,6 +54,7 @@ public class primera_pregunta_capitales extends Activity implements View.OnClick
                 deshabilitar();
                 Intent i=new Intent(this, segunda_pregunta_capitales.class);
                 startActivity(i);
+                finish(); //finalizala actividad al cambiar de pantalla
                 break;
             default:
                 break;
@@ -70,6 +71,10 @@ public class primera_pregunta_capitales extends Activity implements View.OnClick
         c.setEnabled(false);
         d.setEnabled(false);
         siguiente.setEnabled(true);               //habilita siguiente al pulsar una respuesta
+    }
+    //Este metodo deshabilita el boton volver atras
+    public void onBackPressed(){
+
     }
 
 

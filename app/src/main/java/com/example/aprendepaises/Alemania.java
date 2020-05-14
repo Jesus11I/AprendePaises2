@@ -65,7 +65,7 @@ public class Alemania extends Activity  implements View.OnClickListener {   //Vi
             @Override
             public void onTick(long millisUntilFinished) {
                 reloj.setText("Siguiente en "+millisUntilFinished/1000);
-                reloj.setEnabled(true);
+                reloj.setEnabled(false);
                 belgica.setEnabled(false);
                 alemania.setEnabled(false);
                 suiza.setEnabled(false);

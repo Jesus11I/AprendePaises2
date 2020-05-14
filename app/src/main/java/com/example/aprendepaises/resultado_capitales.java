@@ -11,10 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class resultado_capitales extends Activity {
-
-    Intent i;
-    Button reg;
-    TextView texto;
+    private Button reg;
+    private TextView texto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +21,12 @@ public class resultado_capitales extends Activity {
 
         reg=(Button)findViewById(R.id.Inicio);
        texto=(TextView)findViewById(R.id.FIN);
-        i=new Intent(this, MainActivity.class);
-
-        reg.setOnClickListener(new OnClickListener() {
-           @Override
-            public void onClick(View v) {
-                startActivity(i);
-            }
-       });
-
-        }
+    }
+    public void inicio(View inicio){
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish(); //finalizala actividad al cambiar de pantalla
+    }
 
     //Desactivamos el botton de volver con el metodo siguiente
     public  void  onBackPressed(){
